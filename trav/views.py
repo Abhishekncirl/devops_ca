@@ -1,9 +1,14 @@
-from django.http import HttpResponse
+"""
+Module for defining views.
+"""
+from django.shortcuts import render  
 from .models import Trav
-from django.shortcuts import render
 
-     # Create your views here.
+# Create your views here.
 def index(request):
+    """
+    View function for rendering the index page.
+    """
     newest_trav = Trav.objects.order_by('title')[:15]
     context = {'newest_movies': newest_trav}
     return render(request, 'trav/index.html', context)
