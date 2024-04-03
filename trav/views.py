@@ -1,10 +1,9 @@
 """
 Module for defining views.
 """
-from django.shortcuts import render  
+from django.shortcuts import render
 from .models import Trav
 
-# Create your views here.
 def index(request):
     """
     View function for rendering the index page.
