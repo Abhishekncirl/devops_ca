@@ -136,4 +136,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #     os.path.join(BASE_DIR, 'travstatic'),
 # ]
 #SECURE_CROSS_ORIGIN_OPENER_POLICY = None
-
