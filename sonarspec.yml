@@ -15,9 +15,9 @@ phases:
       - unzip ./sonar-scanner-cli-3.3.0.1492-linux.zip
   build:
     commands:
-      - mvn sonar:sonar -Dsonar.login=0e8a1b5d5a5bebefe768c1f9417fe8f6f3862043 -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=devops_project -Dsonar.organization=Abhishek || true
+      - mvn sonar:sonar -Dsonar.login=0e8a1b5d5a5bebefe768c1f9417fe8f6f3862043 -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=devops_ca -Dsonar.organization=Abhishek || true
       - sleep 5
-      - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=devops_project >result.json
+      - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=devops_ca >result.json
       - cat result.json
       - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0 ;fi
  
