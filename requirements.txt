@@ -64,3 +64,5 @@ systemd-python==235
 termcolor==2.5.0
 urllib3==1.26.20
 wcwidth==0.2.13
+Django==2.1.15
+pytz==2024.2
